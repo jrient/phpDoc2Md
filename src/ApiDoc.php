@@ -10,14 +10,14 @@
  *  ==================================================================
  */
 
-namespace itxq\apidoc;
+namespace jrient\phpDoc2md;
 
-use itxq\apidoc\lib\ParseComment;
+use jrient\phpDoc2md\lib\ParseComment;
 
 /**
  * ApiDoc生成
  * Class ApiDoc
- * @package itxq\apidoc
+ * @package jrient\phpDoc2md
  */
 class ApiDoc
 {

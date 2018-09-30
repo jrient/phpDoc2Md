@@ -10,12 +10,12 @@
  *  ==================================================================
  */
 
-namespace itxq\apidoc\lib;
+namespace jrient\phpDoc2md\lib;
 
 /**
  * 工具类
  * Class Tools
- * @package itxq\apidoc\lib
+ * @package jrient\phpDoc2md\lib
  */
 class Tools
 {

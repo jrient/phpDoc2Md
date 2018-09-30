@@ -10,12 +10,12 @@
  *  ==================================================================
  */
 
-namespace itxq\apidoc\lib;
+namespace jrient\phpDoc2md\lib;
 
 /**
  * 注释解析
  * Class ParseComment
- * @package itxq\apidoc\lib
+ * @package jrient\phpDoc2md\lib
  */
 class ParseComment
 {

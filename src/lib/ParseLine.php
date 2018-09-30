@@ -10,12 +10,12 @@
  *  ==================================================================
  */
 
-namespace itxq\apidoc\lib;
+namespace jrient\phpDoc2md\lib;
 
 /**
  * 按行解析注释参数
  * Class ParseLine
- * @package itxq\apidoc\lib
+ * @package jrient\phpDoc2md\lib
  */
 class ParseLine
 {
