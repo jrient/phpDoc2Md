@@ -10,9 +10,9 @@
  *  ==================================================================
  */
 
-namespace jrient\phpDoc2md;
+namespace jrient\phpDoc2Md;
 
-use jrient\phpDoc2md\lib\ParseComment;
+use jrient\phpDoc2Md\lib\ParseComment;
 
 /**
  * ApiDoc生成

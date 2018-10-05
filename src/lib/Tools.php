@@ -10,7 +10,7 @@
  *  ==================================================================
  */
 
-namespace jrient\phpDoc2md\lib;
+namespace jrient\phpDoc2Md\lib;
 
 /**
  * 工具类

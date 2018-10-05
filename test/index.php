@@ -7,11 +7,12 @@ require_once __DIR__ . '/../vendor/autoload.php';
 
 $config = [
     'dir' => __DIR__ .'/../resource/',
-    'class' => []
+    'class' => ['Api']
 ];
 requireAllClass($config);
 
-$api = new \jrient\phpDocMd\BuildMd($config);
+$doc = \jrient\phpDoc2Md\BuildMd::run($config);
+echo "<textarea cols='100' rows='45'>$doc</textarea>";
 exit();
 
 

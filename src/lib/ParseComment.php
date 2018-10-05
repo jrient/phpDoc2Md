@@ -10,7 +10,7 @@
  *  ==================================================================
  */
 
-namespace jrient\phpDoc2md\lib;
+namespace jrient\phpDoc2Md\lib;
 
 /**
  * 注释解析
@@ -47,23 +47,24 @@ class ParseComment
         // 去除无用的注释
         foreach ($comments as $k => $v) {
             $comments[$k] = $v = trim($v);
-            if (strpos($v, '@') !== 0) {
-                continue;
-            }
-            $_parse = $this->_parseCommentLine($v);
-            if (!$_parse) {
-                continue;
-            }
-            $_type = $_parse['type'];
-            $_content = isset($_parse['content']) ? $_parse['content'] : '';
-            if (in_array($_type, ['param', 'code', 'return'])) {
-                if (!isset($this->commentParams[$_type])) {
-                    $this->commentParams[$_type] = [];
-                }
-                unset($_parse['type']);
-                $this->commentParams[$_type][] = $_parse;
+            if (!empty($v) && strpos($v, '@') !== 0) {
+                $this->commentParams['description'] = isset($this->commentParams['description']) ? $this->commentParams['description']."\n".$v : $v;
             } else {
-                $this->commentParams[$_type] = $_content;
+                $_parse = $this->_parseCommentLine($v);
+                if (!$_parse) {
+                    continue;
+                }
+                $_type = $_parse['type'];
+                $_content = isset($_parse['content']) ? $_parse['content'] : '';
+                if (in_array($_type, ['param', 'code', 'return'])) {
+                    if (!isset($this->commentParams[$_type])) {
+                        $this->commentParams[$_type] = [];
+                    }
+                    unset($_parse['type']);
+                    $this->commentParams[$_type][] = $_parse;
+                } else {
+                    $this->commentParams[$_type] = $_content;
+                }
             }
         }
         return $this->commentParams;
